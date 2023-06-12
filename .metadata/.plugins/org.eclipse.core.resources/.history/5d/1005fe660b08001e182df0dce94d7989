@@ -1,0 +1,63 @@
+package com.example.medicalfitness.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.example.medicalfitness.dao.UserRepository;
+import com.example.medicalfitness.entity.User;
+
+@Component
+public class ServiceImpl implements Service{
+
+	@Autowired
+	public UserRepository user;
+
+	
+	@Override
+	public List<User> getalluser() {
+		return user.findAll();
+	}
+
+
+	@Override
+	public User signUpUser(User user) {
+		
+		return null;
+	}
+
+
+	@Override
+	public User authenticateUser(String email, String password) {
+		return null;
+	}
+
+
+	@Override
+	public User getUserByID(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public User deleteByEmailAndPassword(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public User deleteById(int userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public User checkUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,23 @@
+package com.example.medicalfitness.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Setter
+@Getter
+public class Health extends BaseEntity{
+
+	@Column
+	private int heartbeat;
+	
+	@Column
+	private int bloodpressure;
+	
+	@Column
+	@private String regularcheckup;
+	
+	
+}

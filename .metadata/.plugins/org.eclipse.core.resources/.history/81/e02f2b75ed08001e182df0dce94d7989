@@ -1,0 +1,34 @@
+package com.example.medicalfitness.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.medicalfitness.entity.Health;
+
+@Service
+public class HealthServicesImpl implements HealthServices{
+
+	@Autowired
+	private Health health;
+	
+	@Override
+	public List<Health> performRegularHealthCheckup() {
+		
+		
+		return ;
+	}
+
+	@Override
+	public List<Health> provideNutritionGuidance() {
+		return null;
+	}
+
+	@Override
+	public List<Health> encouragePhysicalActivity() {
+		return null;
+	}
+
+	
+}

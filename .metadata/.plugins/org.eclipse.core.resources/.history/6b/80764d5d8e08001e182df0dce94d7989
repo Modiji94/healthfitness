@@ -1,0 +1,23 @@
+package com.example.medicalfitness.services;
+
+import org.springframework.stereotype.Service;
+
+public interface HealthServices{
+
+	    public L0ist<health> performRegularHealthCheckup() ;
+
+	    public void provideNutritionGuidance() ;
+
+	    public void encouragePhysicalActivity() ;
+
+
+
+	
+	
+
+
+
+
+
+
+}

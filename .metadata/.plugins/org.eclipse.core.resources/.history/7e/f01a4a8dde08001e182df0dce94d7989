@@ -1,0 +1,24 @@
+package com.example.medicalfitness.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class HealthServicesImpl implements HealthServices{
+
+	@Override
+	public void performRegularHealthCheckup() {
+		
+		
+	}
+
+	@Override
+	public void provideNutritionGuidance() {
+		
+	}
+
+	@Override
+	public void encouragePhysicalActivity() {
+		
+	}
+
+}

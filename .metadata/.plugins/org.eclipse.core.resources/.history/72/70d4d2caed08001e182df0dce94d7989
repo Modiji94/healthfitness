@@ -1,0 +1,27 @@
+package com.example.medicalfitness.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.medicalfitness.entity.Health;
+
+public interface HealthServices{
+
+	    public List<Health> performRegularHealthCheckup() ;
+
+	    public List<Health> provideNutritionGuidance() ;
+
+	    public List<Health> encouragePhysicalActivity() ;
+
+
+
+	
+	
+
+
+
+
+
+
+}

@@ -1,0 +1,10 @@
+package com.example.medicalfitness.services;
+
+import java.util.List;
+
+import com.example.medicalfitness.entity.User;
+
+public interface Service {
+
+	public List<User>getalluser();
+}

@@ -1,0 +1,19 @@
+package com.example.medicalfitness.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension;
+import org.springframework.stereotype.Repository;
+
+import com.example.medicalfitness.entity.Health;
+import com.example.medicalfitness.entity.User;
+
+@Repository
+@EnableJpaRepositories
+
+public interface HealthRepository extends JpaRepository<Health,Integer>{
+
+	 
+	
+	
+}

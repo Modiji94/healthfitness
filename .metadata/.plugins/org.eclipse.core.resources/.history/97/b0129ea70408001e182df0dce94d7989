@@ -1,0 +1,21 @@
+package com.example.medicalfitness.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.example.medicalfitness.dao.UserRepository;
+import com.example.medicalfitness.entity.User;
+
+@Component
+public class ServiceImpl implements Services{
+
+	public UserRepository user;
+
+	
+	@Override
+	public List<User> getalluser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

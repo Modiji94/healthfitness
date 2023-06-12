@@ -1,0 +1,88 @@
+package com.example.medicalfitness.services;
+
+import java.util.List;
+
+import org.springframework.aop.framework.adapter.ThrowsAdviceInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.example.medicalfitness.dao.UserRepository;
+import com.example.medicalfitness.entity.User;
+import com.example.medicalfitness.exception.CustomeException;
+
+import jakarta.transaction.Transactional;
+
+@Service
+@Transactional
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	UserRepository user;
+
+	
+	@Override
+	public List<User> getalluser() {
+		return user.findAll();
+	}
+
+
+	@Override
+	public User signUpUser(User newlycreateduser) {
+		User u=user.save(newlycreateduser);
+		if(u!=null) 
+			return u;
+
+			else {
+				throw new CustomeException("cannot created please enter the valid details");
+			}
+	}
+
+
+	@Override
+	public User authenticateUser(String email, String password) {
+		System.out.println("email"+email);
+		System.out.println("password"+password);
+		User u=user.findbyEmailandPassword( email.trim(), password.trim());
+		
+		if(u!=null)
+			return u;
+		else
+				throw new CustomeException("invalid email and password");
+		
+	}
+
+	@Override
+	public User getUserByID(int id) {
+		
+//			return user.findById(id).orElsethrow(throw new CustomeException("id is not correct"));
+			return user.findById(id).orElseThrow(() -> new CustomeException("Invalid User ID...!!!"));
+	}
+
+
+	@Override
+	public User deleteById(int userId) {
+		User u=getUserByID(userId);
+		if(u!=null) {
+			user.deleteById(userId);
+			return u;
+		}
+		
+		else {
+			throw new CustomeException("Enter a valid Id");
+		}
+	}
+		
+
+	@Override
+	public User checkUserByEmail(String email) {
+		User u=user.findbyEmail(email);
+		if(u!=null) {
+			return u;
+		}
+		else {
+			throw new CustomeException("Enter a valid Id");
+		}
+	}
+	
+}

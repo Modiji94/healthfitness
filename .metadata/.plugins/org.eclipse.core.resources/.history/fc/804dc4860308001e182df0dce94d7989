@@ -1,0 +1,15 @@
+package com.example.medicalfitness.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.example.medicalfitness.entity.User;
+
+@Component
+public class ServiceImpl {
+
+	public List<User>getallUsers(){
+		
+	}
+}

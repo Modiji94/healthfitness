@@ -1,0 +1,69 @@
+package com.example.medicalfitness.services;
+
+import java.util.List;
+
+import org.springframework.aop.framework.adapter.ThrowsAdviceInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.example.medicalfitness.dao.UserRepository;
+import com.example.medicalfitness.entity.User;
+import com.example.medicalfitness.exception.CustomeException;
+
+@Component
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	 UserRepository user;
+
+	
+	@Override
+	public List<User> getalluser() {
+		return user.findAll();
+	}
+
+
+	@Override
+	public User signUpUser(User newlycreateduser) {
+		if(newlycreateduser!=null) 
+			return user.save(newlycreateduser);
+
+			else {
+				throw new CustomeException("cannot created please enter the valid details");
+			}
+	}
+
+
+	@Override
+	public User authenticateUser(String email, String password) {
+		return null;
+	}
+
+
+	@Override
+	public User getUserByID(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public User deleteByEmailAndPassword(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public User deleteById(int userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public User checkUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,5 @@
+package com.example.medicalfitness.services;
+
+public class HealthServicesImpl implements HealthServices{
+
+}

@@ -1,0 +1,5 @@
+package com.example.medicalfitness.dto;
+
+public class Logindto {
+
+}

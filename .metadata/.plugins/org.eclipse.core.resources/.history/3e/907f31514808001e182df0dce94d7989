@@ -1,0 +1,20 @@
+package com.example.medicalfitness.dao;
+
+import java.util.List;
+
+import org.aspectj.lang.annotation.SuppressAjWarnings;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import com.example.medicalfitness.entity.User;
+
+@SuppressAjWarnings
+@EnableJpaRepositories
+public interface UserRepository extends JpaRepository<User,Integer>{
+	
+	 User findbyEmailandPassword(String email,String password);
+	
+	  User findbyEmail(String email);
+	
+
+}

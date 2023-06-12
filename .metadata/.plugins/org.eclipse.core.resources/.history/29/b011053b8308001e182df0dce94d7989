@@ -1,0 +1,54 @@
+package com.example.medicalfitness.services;
+
+import org.springframework.stereotype.Service;
+
+public interface HealthServices{
+
+	@Service
+	public class ElderlyHealthService {
+	    public void performRegularHealthCheckup() {
+	        // Code for performing regular health check-ups
+	    }
+
+	    public void provideNutritionGuidance() {
+	        // Code for providing nutrition guidance
+	    }
+
+	    public void encouragePhysicalActivity() {
+	        // Code for encouraging physical activity
+	    }
+
+	    // Define other methods for additional health-related aspects
+	}
+
+	@Service
+	public class ElderlyHealthService {
+	    private final HealthCheckupService healthCheckupService;
+
+	    @Autowired
+	    public ElderlyHealthService(HealthCheckupService healthCheckupService) {
+	        this.healthCheckupService = healthCheckupService;
+	    }
+
+	    // ...
+	}
+	
+	@RestController
+	public class UserController {
+	    private final ElderlyHealthService elderlyHealthService;
+
+	    @Autowired
+	    public UserController(ElderlyHealthService elderlyHealthService) {
+	        this.elderlyHealthService = elderlyHealthService;
+	    }
+
+	    // Use the elderlyHealthService methods within your controller
+	}
+
+
+
+
+
+
+
+}

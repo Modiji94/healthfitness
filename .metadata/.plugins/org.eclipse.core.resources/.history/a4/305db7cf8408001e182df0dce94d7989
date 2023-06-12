@@ -1,0 +1,30 @@
+package com.example.medicalfitness.controller;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/health")
+@CrossOrigin(origins="http://localhost:3000")
+
+public class HealthController {
+
+	
+	@Override
+	public void performRegularHealthCheckup() {
+		
+		
+	}
+
+	@Override
+	public void provideNutritionGuidance() {
+		
+	}
+
+	@Override
+	public void encouragePhysicalActivity() {
+		
+	}
+
+}

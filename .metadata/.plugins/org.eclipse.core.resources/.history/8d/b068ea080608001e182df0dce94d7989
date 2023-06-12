@@ -1,0 +1,15 @@
+package com.example.medicalfitness.dao;
+
+import java.util.List;
+
+import com.example.medicalfitness.entity.User;
+
+public class UserRepository {
+	
+	private User user;
+
+	public List<User> findall() {
+		return ;
+	}
+
+}
